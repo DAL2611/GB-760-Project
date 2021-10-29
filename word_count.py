@@ -6,10 +6,18 @@ by using argparse
 import argparse
 
 # create args
-parser = argparse.ArgumentParser()
-parser.add_argument('word', metavar='word', type=str, help='enter your word')
-args = parser.parse_args()
+# parser = argparse.ArgumentParser()
+# parser.add_argument('word', metavar='word', type=str, help='enter your word')
+# args = parser.parse_args()
 
-word = args.word
+# word = args.word
+
+word = input('Enter word: ')
+
+with open('tweet4.txt', 'r') as file:
+    data = file.read().replace('\n', '')
+
+c = data.count(word)
 
 print(word)
+print(c)
