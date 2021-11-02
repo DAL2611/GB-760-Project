@@ -10,7 +10,7 @@ bearer_token = os.environ.get("BEARER_TOKEN")
 
 
 def create_url():
-    return "https://api.twitter.com/2/tweets/search/recent?query=from%3Atwitterdev&tweet.fields=created_at"
+    return "https://api.twitter.com/2/tweets/sample/stream?tweet.fields=created_at"
 
 
 def bearer_oauth(r):
