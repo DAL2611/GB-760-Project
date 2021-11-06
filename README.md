@@ -8,3 +8,7 @@
 **Lucius Liu** fliu239@wisc.edu
 
 **Wanpeng Meng** wmeng24@wisc.edu
+
+**Vitchuda Poonyakanok (PINK)** poonyakanok@wisc.edu
+
+**DUC LE** dale5@wisc.edu
