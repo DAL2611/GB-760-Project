@@ -1,3 +1,4 @@
+
 """
 File: server.py
 Name: Group
@@ -9,7 +10,7 @@ following format:
 tweet timestamp in YYYY-MM-DD-HH-MM-SS format, tweet text
 """
 import tweepy
-
+import time
 
 consumer_key = '55iKh2vnoNjRNldmBRi1SAT3e'
 consumer_secret = 'eFIqDQn8mkf0jaXB1PUgtjPHWmDqLewFJTJMVHdxkhcdrgPVKe'
@@ -18,11 +19,8 @@ access_secret = 'NJAhAqMjYIyoAevVA7t8QWiboX1LVBwr513xNBTRokSyE'
  
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_key, access_secret)
- 
- 
-api = tweepy.API(auth)
 
- 
+api = tweepy.API(auth)
 
 def main():
 	"""
@@ -31,11 +29,12 @@ def main():
 	with open('tweets.txt', 'w') as out:
 			out.write('timestamp,text\n')
 			for tweet in tweepy.Cursor(api.search_tweets, q='*', lang='en').items():
-				timestamp = str(tweet.created_at)
+				# timestamp = str(tweet.created_at)
+				s_time = time.strptime(str(tweet.created_at), "%Y-%m-%d %H:%M:%S+00:00")
+				timestamp = time.strftime("%Y-%m-%d-%H-%M-%S", s_time)
 				text = tweet.text
 				out.write(timestamp+','+text+'\n')
 
 
 if __name__ == '__main__':
     main()
-
