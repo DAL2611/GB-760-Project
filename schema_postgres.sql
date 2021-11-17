@@ -1,8 +1,8 @@
 CREATE TABLE tweets (
    time_stamp	 	INT           	NOT NULL,
+   time_group 		INT				NOT NULL,
    word_or_phrase 	char(1000) 		NOT NULL,
-   word_count 		NUMERIC 		NOT NULL
-);
+   word_count 		NUMERIC 		NOT NULL);
 
 CREATE FUNCTION random_string(minlen NUMERIC, maxlen NUMERIC)
 RETURNS VARCHAR(1000)
@@ -26,8 +26,7 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 
-INSERT INTO tweets (time_stamp,  word_or_phrase, word_count)
-
+INSERT INTO tweets (time_stamp, time_group, word_or_phrase, word_count)
 SELECT GENERATE_SERIES
      , initcap(lower(random_string(2, 8)))
      , initcap(lower(random_string(2, 8)))
