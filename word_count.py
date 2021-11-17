@@ -10,6 +10,7 @@ by using argparse
 import argparse
 import itertools
 import collections
+# ngram
 
 FILENAME = 'tweets.txt'
 WORD_DICT = {}
@@ -31,30 +32,51 @@ def count_freq_word(line):
 			WORD_DICT[word] += 1
 
 
-
-def read_file(filename, word):
+def read_file(filename, word, mode='Word'):
 	"""
-	Read the file 
+	Read the file and count phrase frequency
 	"""
 	with open(filename, 'r') as f:
+		count = 0
 		for line in f:
 			line = line.strip()
-			line_l = line.split(",")
-			count_freq_word(line_l)
+
+			# count frequency of phrase or word 
+			if mode == 'Phrase':
+				if word in line:
+					count += 1
+			if mode == 'Word':
+				line_l = line.split(",")
+				count_freq_word(line_l)
+
+		if mode == 'Phrase':
+			return count
+
+
 
 def main():
 	# create args
 	parser = argparse.ArgumentParser()
-	# parser.add_argument('word', metavar='word', type=str, help='enter your word')
-	# parser.add_argument('sentence', help='enter your sentence')
-	parser.add_argument('-w','--word', help='enter your word', required=False)
+	parser.add_argument('-w','--word', help='enter your word -w word and phrase -w "phrase" ', required=False)
 	args = parser.parse_args()
 	
 	word = args.word
 	
-	read_file(FILENAME, word)
-	print(WORD_DICT[word])
+	# identify whether this is a phrase or word
+	phrase = word.split(" ")
+	count_phrase = 0
+	if len(phrase) > 1:
+		# if phrase
+		count = read_file(FILENAME, word, mode='Phrase')
+		print(count)
+	else:
+		# if word
+		read_file(FILENAME, word, mode='Word')
+		print(WORD_DICT[word])
+	
 
 if __name__ == '__main__':
 	main()	
+
+
 
