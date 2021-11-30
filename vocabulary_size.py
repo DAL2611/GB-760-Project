@@ -31,6 +31,8 @@ def main():
 			line = line.strip()
 			line_l = line.split(",")
 			count_freq_word(line_l)
+
+	print('The number of unique words:', len(WORD_DICT))
  
 
 if __name__ == '__main__':
