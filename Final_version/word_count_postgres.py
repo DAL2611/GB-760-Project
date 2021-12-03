@@ -21,13 +21,7 @@ def count_freq_word(word, time):
 	"""
 	count the frequency of that word in the current minute
 	"""
-	# write your psycopg query here fighting :) 
-	# the input word will be "word"
-	# so look like below
-	# query = """
-	#	select * from table where word == {word}
-	# 
-	# 	"
+
 	cur = conn.cursor()
 	
 	query = """
