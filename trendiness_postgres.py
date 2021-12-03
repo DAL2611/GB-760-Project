@@ -152,7 +152,7 @@ def main():
 	
 	query = """
 	
-	select time_stamp, time_group, word_or_phrase, count 
+	select time_stamp, time_group, word, word_count 
 	from tweets;
 	"""
 	cur.execute(query)
