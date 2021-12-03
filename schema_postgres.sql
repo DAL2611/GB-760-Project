@@ -1,5 +1,7 @@
-CREATE TABLE tweets (
-   time_group 		INT				NOT NULL,
-   word_or_phrase 	varchar(1000) 	NOT NULL,
-   word_count 		NUMERIC 		NOT NULL);
+DROP TABLE tweets;
 
+CREATE TABLE tweets (
+   time_stamp		TIMESTAMP		NOT NULL,  
+   time_group		TIMESTAMP		NOT NULL,   
+   word				varchar(1000)	NOT NULL,
+   word_count		INT				NOT NULL);
