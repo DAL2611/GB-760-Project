@@ -107,7 +107,7 @@ class TweetPrinter(tweepy.Stream):
 	
 		query = """
 		
-		INSERT INTO tweets(time_stamp, time_group, word_or_phrase, count)
+		INSERT INTO tweets(time_stamp, time_group, word, word_count)
 		VALUES (%t, %t, %s, %s);
 		"""
 		cur.execute(query, list1)
