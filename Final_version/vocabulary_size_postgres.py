@@ -1,5 +1,5 @@
 """
-File: word_count_postgres.py
+File: vocabulary_size_postgres.py
 Name: Group
 ---------------------------
 This file calculate the vocabulary size in the current minute. The user need to input a time and will return the vocabulary size.
