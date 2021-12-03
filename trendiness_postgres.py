@@ -1,10 +1,10 @@
 """
-File: word_count_postgres.py
+File: trendiness_postgres.py
 Name: Group
 ---------------------------
-This file compute frequencies of words and phrases 
-by using psycopg. The user will input a word and will
-return the frequency of that word.
+This file compute the trendiness score by combining 
+the works from previous part.The user will input a word 
+and will return the trendiness score of that word.
 """
 
 import argparse
@@ -17,25 +17,47 @@ import math
 
 conn = psycopg.connect("dbname=tweets")
 
+def get_most_recent_timestamp():
+	cur = conn.cursor()
+	
+	query = """
+	
+	select time_stamp
+	from tweets
+	order by time_stamp desc
+	limit 1
+	"""
+	
+	cur.execute(query)
+	for row in cur:
+		time = row
+	#timestamp = datetime.datetime.strptime(time, "%Y-%m-%d %H:%M:%S")
+	
+	current_time = time[0]
+		
+	return current_time
+
 
 # Value for the Current Time	
 def count_freq_word_current(word, time, res):
 	wc_count = 0
-	timestamp = datetime.datetime.strptime(time, "%Y-%m-%d %H:%M:%S")
+	#timestamp = datetime.datetime.strptime(time, "%Y-%m-%d %H:%M:%S")
+	timestamp = time
 	timegroup1 = timestamp + datetime.timedelta(seconds = -timestamp.second)
-	print("Current Time Group:" , timegroup1)
+	#print("Current Time Group:" , timegroup1)
 
 	for i in res:
 		if i[2] == word and i[1] == timegroup1:
 			wc_count = wc_count + i[3]
-	print(wc_count)
+	#print(wc_count)
 	return(wc_count)
 	 
 def unique_vocabulary_size_current(time, res):	
 	WORD_DICT = {}
-	timestamp = datetime.datetime.strptime(time, "%Y-%m-%d %H:%M:%S")
+	#timestamp = datetime.datetime.strptime(time, "%Y-%m-%d %H:%M:%S")
+	timestamp = time
 	timegroup1 = timestamp + datetime.timedelta(seconds = -timestamp.second)
-	print("Current Time Group:" , timegroup1)
+	#print("Current Time Group:" , timegroup1)
 
 	for i in res:
 		if i[1] == timegroup1 and i[2] not in WORD_DICT:
@@ -44,42 +66,45 @@ def unique_vocabulary_size_current(time, res):
 		else:
 			pass
 	V1 = len(WORD_DICT)
-	print('The Vocabulary Size in Current Time Group is', V1)
+	#print(V1)
 	return(V1)	
 
 
 def count_total_word_current(time, res):
 	twc_count = 0
-	timestamp = datetime.datetime.strptime(time, "%Y-%m-%d %H:%M:%S")
+	#timestamp = datetime.datetime.strptime(time, "%Y-%m-%d %H:%M:%S")
+	timestamp = time
 	timegroup1 = timestamp + datetime.timedelta(seconds = -timestamp.second)
-	print("Current Time Group:" , timegroup1)
+	#print("Current Time Group:" , timegroup1)
 
 	for i in res:
 		if i[1] == timegroup1:
 			twc_count = twc_count + 1
 	
-	print(twc_count)
+	#print(twc_count)
 	return(twc_count)	
 	
 # Value for the Prior Time	
 def count_freq_word_prior(word, time, res):
 	wp_count = 0
-	timestamp = datetime.datetime.strptime(time, "%Y-%m-%d %H:%M:%S")
+	#timestamp = datetime.datetime.strptime(time, "%Y-%m-%d %H:%M:%S")
+	timestamp = time
 	timegroup2 = timestamp + datetime.timedelta(minutes = -1, seconds = -timestamp.second)
-	print("Prior Time Group:" , timegroup2)
+	#print("Prior Time Group:" , timegroup2)
 
 	for i in res:
 		if i[2] == word and i[1] == timegroup2:
 			wp_count = wp_count + i[3]
 
-	print(wp_count)
+	#print(wp_count)
 	return(wp_count)
 
 def unique_vocabulary_size_prior(time, res):	
 	WORD_DICT2 = {}
-	timestamp = datetime.datetime.strptime(time, "%Y-%m-%d %H:%M:%S")
+	#timestamp = datetime.datetime.strptime(time, "%Y-%m-%d %H:%M:%S")
+	timestamp = time
 	timegroup2 = timestamp + datetime.timedelta(seconds = -timestamp.second)
-	print("Prior Time Group:" , timegroup2)
+	#print("Prior Time Group:" , timegroup2)
 
 	for i in res:
 		if i[1] == timegroup2 and i[2] not in WORD_DICT2:
@@ -88,37 +113,40 @@ def unique_vocabulary_size_prior(time, res):
 		else:
 			pass
 	V2 = len(WORD_DICT2)
-	print('The Vocabulary Size in Current Time Group is', V2)
+	#print(V2)
 	return(V2)
 def count_total_word_prior(time, res):
 	twp_count = 0
-	timestamp = datetime.datetime.strptime(time, "%Y-%m-%d %H:%M:%S")
+	#timestamp = datetime.datetime.strptime(time, "%Y-%m-%d %H:%M:%S")
+	timestamp = time
 	timegroup2 = timestamp + datetime.timedelta(minutes = -1, seconds = -timestamp.second)
-	print("Prior Time Group:" , timegroup2)
+	#print("Prior Time Group:" , timegroup2)
 
 	for i in res:
 		if i[1] == timegroup2:
 			twp_count = twp_count + 1
 
-	print(twp_count)
+	#print(twp_count)
 	return(twp_count)
 	
-def trendness_score(wc_count, V1, twc_count, wp_count, V2, twp_count):
+def trendiness_score(wc_count, V1, twc_count, wp_count, V2, twp_count):
 	Trendiness_Score = math.log10((1+wc_count)/(V1+twc_count))-math.log10((1+wp_count)/(V1+twp_count))
-	print(Trendiness_Score)
+	return(Trendiness_Score)
 
 # Prepare to Calculate Trendiness Score
 def main():
 
 	parser = argparse.ArgumentParser()
 	parser.add_argument('-w','--word', type=str, help='enter your word -w word and phrase -w "phrase" ')
-	parser.add_argument('---timestamp', type=str, help='enter your word -timestamp "time"')
+	#parser.add_argument('---timestamp', type=str, help='enter your word -timestamp "time"')
 	args = parser.parse_args()
 	
 	word = args.word
-	time = args.timestamp
+	time= get_most_recent_timestamp()
 	
-	print(word)
+	print("The Word is:", word)
+	print("The Current Time is:", time)
+	
 	#load data from database
 	cur = conn.cursor()
 	
@@ -143,7 +171,7 @@ def main():
 	wp = count_freq_word_prior(word, time, res)
 	V2 = unique_vocabulary_size_prior(time, res)
 	twp= count_total_word_prior(time, res)
-	trendness_score(wc, V1, twc, wp, V2, twp)
+	print("The Trendiness Score of", word, "is:", trendiness_score(wc, V1, twc, wp, V2, twp))
         
 if __name__ == '__main__':
 	main()	
