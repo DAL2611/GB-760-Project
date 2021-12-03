@@ -32,7 +32,7 @@ def count_freq_word(word, time):
 	
 	query = """
 	
-	select time_stamp, time_group, word_or_phrase, count 
+	select time_stamp, time_group, word, word_count 
 	from tweets
 	"""
 	
