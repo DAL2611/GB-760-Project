@@ -24,7 +24,7 @@ Then, milestone 2 (M2) mainly consists of transitioning our code to use a Postgr
 
 Finally, the files of milestone 3 (M3) are about upgrading our code to use Kafka as a streaming message queue.
 
-The detailed running code information is as follows:
+The detailed running code instruction is as follows:
 
 In word_count.py, we need to type "python word_count.py --like (an example here, it can be a word or a phrase)".
 
