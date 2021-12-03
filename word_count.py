@@ -13,8 +13,7 @@ import collections
 import pandas as pd
 # ngram
 
-# FILENAME = 'tweets.txt'
-FILENAME = 'tweetsssssss.txt'
+FILENAME = 'tweets.txt'
 WORD_DICT = {}
 
 
