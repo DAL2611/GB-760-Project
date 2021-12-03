@@ -11,6 +11,7 @@ import collections
 import pandas as pd
 import psycopg
 import datetime
+from time import gmtime, strftime
 
 conn = psycopg.connect("dbname=tweets")
 
@@ -30,8 +31,7 @@ def cal_vocabulary_size(time):
 	query = """
 	
 	select time_stamp, time_group, word, word_count 
-	from tweets
-	limit 20;
+	from tweets;
 	
 	"""
 	
@@ -50,8 +50,10 @@ def cal_vocabulary_size(time):
 	cur.close()
 	
 	WORD_DICT = {}
-	timestamp = datetime.datetime.strptime(time, "%Y-%m-%d %H:%M:%S")
+	#timestamp = datetime.datetime.strptime(time, "%Y-%m-%d %H:%M:%S")
+	timestamp = time
 	timegroup = timestamp + datetime.timedelta(seconds = -timestamp.second)
+	
 	print("Current Time Group:" , timegroup)
 
 	for i in res:
@@ -65,15 +67,31 @@ def cal_vocabulary_size(time):
 
 	#pass
 
+def get_most_recent_timestamp():
+	cur = conn.cursor()
 
+	query = """
+	
+	select time_stamp
+	from tweets
+	order by time_stamp desc
+	limit 1;
+	"""
+
+	cur.execute(query)
+	for row in cur:
+		time = row
+	#timestamp = datetime.datetime.strptime(time, "%Y-%m-%d %H:%M:%S")
+
+	current_time = time[0]
+
+	return current_time
 
 def main():
-
 	parser = argparse.ArgumentParser()
-	parser.add_argument('---timestamp', type=str, help='enter your word -timestamp "time"')
 	args = parser.parse_args()
 	
-	time = args.timestamp
+	time = get_most_recent_timestamp()
 	
 	cal_vocabulary_size(time)
 
