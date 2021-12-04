@@ -26,16 +26,16 @@ Finally, the files of milestone 3 (M3) are about upgrading our code to use Kafka
 
 The detailed running code instruction is as follows:
 
-In **server.py**: Type "python server.py". Then we can type "ls" to see all files in the project and get the **tweets.txt**.
+In [**server.py**](server.py) : Type "python server.py". Then we can type "ls" to see all files in the project and get the **tweets.txt**.
 
-In **word_count.py**: Type "python word_count.py -like ("-word" is for a word and "--phrase phrase" is for a phrase)".
+In [**word_count.py**](word_count.py): Type "python word_count.py -like ("-word" is for a word and "--phrase phrase" is for a phrase)".
 
-In **vocabulary_size.py**: Type "python vocabulary_size.py".
+In [**vocabulary_size.py**](vocabulary_size.py): Type "python vocabulary_size.py".
 
-To use **server_postgres.sql**:
+To use [**server_postgres.sql**](server_postgres.sql):
 Type "git clone git@github.com:DAL2611/GB-760-Project.git" to clone our project.
 Type "psql" to get into the postgresSQL environment.
 Type "\c tweets" to connect the database.
 ...
 
-In **word_count_postgres.py**: Type "python word_count_postgres.py -like ("-word" is for a word and "--phrase phrase" is for a phrase)".
+In [**word_count_postgres.py**](word_count_postgres.py): Type "python word_count_postgres.py -like ("-word" is for a word and "--phrase phrase" is for a phrase)".
