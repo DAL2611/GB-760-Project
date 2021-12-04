@@ -1,5 +1,4 @@
 # Failure in project
-Along with this project,
 
 From overall part, there exists a lag time of approximately 15 minutes before the code can resume the reading of the tweets whenever the code is runned continuously multiple times. (Limitation of using the user’s authentication key)
 
