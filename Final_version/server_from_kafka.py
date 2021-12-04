@@ -85,10 +85,6 @@ def split_time_phrase(line, timegroup):
 
 def main():
 
-	# for message in consumer:
-	# 	kafka_data = message[6]
-	# 	print(k)
-
 	for message in consumer:
 		# print(message.value)
 		time_stamp = message.value[13:32]
