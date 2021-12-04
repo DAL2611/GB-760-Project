@@ -81,7 +81,7 @@ def split_time_phrase(line, timegroup):
 			#print(time, time_group, phrase, 1)
 			insert_to_table(time, time_group, phrase, 1)
 
-# string must be interger
+
 
 def main():
 
