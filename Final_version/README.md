@@ -29,10 +29,6 @@ In **server.py**: Type "python server.py". Then we can type "ls" to see all file
 
 In **word_count.py**: Type "python word_count.py -w like ("-w word" is for a word and "-w "phrase phrase"" is for a phrase)". If you type it wrongly, there will be a help information showing correct usage. Please follow it.
 
-In **server.py** : Type "python server.py". Then we can type "ls" to see all files in the project and get the **tweets.txt**.
-
-In **word_count.py**: Type "python word_count.py -like ("-word" is for a word and "--phrase phrase" is for a phrase)".
-
 In **vocabulary_size.py**: Type "python vocabulary_size.py".
 
 To use **server_postgres.sql**:
