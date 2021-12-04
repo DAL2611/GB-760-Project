@@ -26,6 +26,6 @@ Finally, the files of milestone 3 (M3) are about upgrading our code to use Kafka
 
 The detailed running code instruction is as follows:
 
-In word_count.py, we need to type "python word_count.py --like (an example here, it can be a word or a phrase)".
+In **word_count.py**, we need to type "python word_count.py -like ("-word" is for a word and "--phrase phrase" is for a phrase)".
 
-In word_count_postgres.py, we also need to input "python word_count_postgres.py --like (an example here, it can be a word or a phrase)".
+In **word_count_postgres.py**, we also need to input "python word_count_postgres.py -like ("-word" is for a word and "--phrase phrase" is for a phrase)".
