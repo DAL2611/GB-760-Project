@@ -47,12 +47,12 @@ The detailed running code instruction is as follows:
 
 Then, milestone 2 (M2) mainly consists of transitioning our code to use a PostgreSQL database instead of a data lake, continuing to read tweets from the Twitter API and writting them to our database using Python.
 
-  * To use [**schema_postgres.sql**](schema_postgres.sql):
-    Type `git clone git@github.com:DAL2611/GB-760-Project.git` to clone our project.
-    Type `psql` to get into the postgresSQL environment.
-    Type `create database tweets` to create a new database.
-    Type `\q` to exit from PostgreSQL.
-    Type `psql tweets < schema_postgres.sql` to create a new table named tweets
+  * To use [**schema_postgres.sql**](schema_postgres.sql):\
+    Type `git clone git@github.com:DAL2611/GB-760-Project.git` to clone our project.  
+    Type `psql` to get into the postgresSQL environment.  
+    Type `create database tweets` to create a new database.  
+    Type `\q` to exit from PostgreSQL.  
+    Type `psql tweets < schema_postgres.sql` to create a new table named tweets  
     
   * To use [**server_postgres.py**](server_postgres.py): Type "python word_count_postgres.py"
   
