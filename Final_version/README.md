@@ -24,32 +24,70 @@ The files of milestone 1 (M1) are about simply reading tweets from the Twitter A
 
 The detailed running code instruction is as follows:
 
-  * In **server.py**: Type "python server.py". Then we can type "ls" to see all files in the project and get the **tweets.txt**.
+  * In [**server.py**](server.py): Type "python server.py". Then we can type `ls` to see all files in the project and get the **tweets.txt**.
+  
+  ```
+  python server.py
+  ```
 
-  * In **word_count.py**: Type "python word_count.py -w -word" // Type 'python word_count.py -w "your phrase"'
+  * In [**word_count.py**](word_count.py): Type "python word_count.py -w -word" // Type 'python word_count.py -w "your phrase"'
 
     ("-word" is for a word and "--phrase phrase" is for a phrase)".
+  ```
+  python word_count.py -w -word "your phrase"
+  ```
 
-  * In **vocabulary_size.py**: Type "python vocabulary_size.py".
+  * In [**vocabulary_size.py**](vocabulary_size.py): Type "python vocabulary_size.py".
 
+  ```
+  python vocabulary_size.py
+  ```
+  
 ## Milestone 2
 
 Then, milestone 2 (M2) mainly consists of transitioning our code to use a PostgreSQL database instead of a data lake, continuing to read tweets from the Twitter API and writting them to our database using Python.
 
-  * To use **server_postgres.sql**:
-    Type "git clone git@github.com:DAL2611/GB-760-Project.git" to clone our project.
-    Type "psql" to get into the postgresSQL environment.
-    Type "\c tweets" to connect the database.
-...
+  * To use [**schema_postgres.sql**](schema_postgres.sql):
+    Type `git clone git@github.com:DAL2611/GB-760-Project.git` to clone our project.
+    Type `psql` to get into the postgresSQL environment.
+    Type `create database tweets` to create a new database.
+    Type `\q` to exit from PostgreSQL.
+    Type `psql tweets < schema_postgres.sql` to create a new table named tweets
+    
+  * To use [**server_postgres.py**](server_postgres.py): Type "python word_count_postgres.py"
+  
+  ```
+  python word_count_postgres.py 
+  ```
 
-  * In **word_count_postgres.py**: Type "python word_count_postgres.py -like ("-word" is for a word and "--phrase phrase" is for a phrase)".
+  * In [**word_count_postgres.py**](word_count_postgres.py): Type "python word_count_postgres.py -w -word ("-word" is for a word and "--phrase phrase" is for a phrase)".
+
+  ```
+  python word_count_postgres -w -word "your phrase"
+  ```
+
+  * In [**vocabulary_size_postgres.py**](vocabulary_size_postgres.py): Type "python vocabulary_size_postgres.py -w -word ("-word" is for a word and "--phrase phrase" is for a phrase)".
+
+  ```
+  python vocabulary_size_postgres -w -word "your phrase"
+  ```
+  
+  * In [**trendiness_postgres.py**](trendiness_postgres.py): Type "python trendiness_postgres.py -w -word ("-word" is for a word and "--phrase phrase" is for a phrase)".
+
+  ```
+  python trendiness_postgres -w -word "your phrase"
+  ```
 
 ## Milestone 3
 
 Finally, the files of milestone 3 (M3) are about upgrading our code to use Kafka as a streaming message queue.
 
-  * sudo systemctl start kafka -> sudo systemctl status kafka (for checking)
-  * Create Topics in your terminal: ~/kafka/bin/kafka-topics.sh --create --topic gb760 --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1
-  * Run **server_to_kafka.py**
-  * Run **server_from_kafka.py**
-  * Run **trendiness_kafka.py -w -word** : As long as this code runs, at each new minute, it should print the most up-to-date trendiness score
+  * sudo `systemctl start kafka` -> `sudo systemctl status kafka` (for checking)
+  * Create Topics in your terminal: `~/kafka/bin/kafka-topics.sh --create --topic gb760 --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1`
+  * Run [**server_to_kafka.py**](server_to_kafka.py)
+  * Run [**server_from_kafka.py**](server_from_kafka.py)
+  * Run [**trendiness_kafka.py**](trendiness_kafka.py): As long as this code runs, at each new minute, it should print the most up-to-date trendiness score
+  
+  ```
+  python trendiness_postgres -w -word "your phrase"
+  ```
