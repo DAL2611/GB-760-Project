@@ -1,5 +1,5 @@
 """
-GB-760 Final Project
+GB 760 Final Project
 -----------------------------------------------
 File : server_from_kafka.py
 Name : Group 4
