@@ -54,10 +54,10 @@ Then, milestone 2 (M2) mainly consists of transitioning our code to use a Postgr
     Type `\q` to exit from PostgreSQL.  
     Type `psql tweets < schema_postgres.sql` to create a new table named tweets  
     
-  * To use [**server_postgres.py**](server_postgres.py): Type "python word_count_postgres.py"
+  * To use [**server_postgres.py**](server_postgres.py): Type "python server_postgres.py"
   
   ```
-  python word_count_postgres.py 
+  python server_postgres.py
   ```
 
   * In [**word_count_postgres.py**](word_count_postgres.py): Type "python word_count_postgres.py -w -word ("-word" is for a word and "--phrase phrase" is for a phrase)".
