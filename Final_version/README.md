@@ -30,11 +30,14 @@ The detailed running code instruction is as follows:
   python server.py
   ```
 
-  * In [**word_count.py**](word_count.py): Type "python word_count.py -w -word" // Type 'python word_count.py -w "your phrase"'
+  * In [**word_count.py**](word_count.py): Type "python word_count.py -w word" // Type "python word_count.py -w "phrase phrase"'
 
-    ("-word" is for a word and "--phrase phrase" is for a phrase)".
+    ('-w word' to count a word and '-w "phrase phrase"' to count a phrase)".
   ```
-  python word_count.py -w -word "your phrase"
+  python word_count.py -w word
+  ```
+  ```
+  python word_count.py -w "phrase phrase"
   ```
 
   * In [**vocabulary_size.py**](vocabulary_size.py): Type "python vocabulary_size.py".
