@@ -36,6 +36,7 @@ The detailed running code instruction is as follows:
   ```
   python word_count.py -w word
   ```
+  or
   ```
   python word_count.py -w "phrase phrase"
   ```
@@ -66,7 +67,11 @@ Then, milestone 2 (M2) mainly consists of transitioning our code to use a Postgr
   * In [**word_count_postgres.py**](word_count_postgres.py): Type "python word_count_postgres.py -w -word ("-word" is for a word and "--phrase phrase" is for a phrase)".
 
   ```
-  python word_count_postgres -w -word "your phrase"
+  python word_count_postgres -w word
+  ```
+  or
+  ```
+  python word_count_postgres -w "phrase phrase"
   ```
 
   * In [**vocabulary_size_postgres.py**](vocabulary_size_postgres.py): Type "python vocabulary_size_postgres.py -w -word ("-word" is for a word and "--phrase phrase" is for a phrase)".
