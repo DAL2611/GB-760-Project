@@ -22,6 +22,26 @@
             "text": "RT @chizom_: I need Devs and Mental Health experts who would join me and Code Hub Africa Tech to do some good.\n\nAre you a Dev and you know\u2026"
         }
     ],
+    {
+            "created_at": "2021-10-22T13:00:03.000Z",
+            "id": "1451533812022726666",
+            "text": "Introducing the Twitter Developer Insider Program\ud83c\udf89\ud83e\udd73Congratulations to our first group of amazing Insiders. So excited to work with you all! \n@JaniquekaJohn @hbeckpdx\n@Jarmosan @edent\n@IgorBrigadir @jamie_maguire1 \nFor more information, follow this link!\nhttps://t.co/I0mvRiedEV"
+        },
+        {
+            "created_at": "2021-10-22T13:00:03.000Z",
+            "id": "1451533812022726666",
+            "text": "Introducing the Twitter Developer Insider Program\ud83c\udf89\ud83e\udd73Congratulations to our first group of amazing Insiders. So excited to work with you all! \n@JaniquekaJohn @hbeckpdx\n@Jarmosan @edent\n@IgorBrigadir @jamie_maguire1 \nFor more information, follow this link!\nhttps://t.co/I0mvRiedEV"
+        },
+        {
+            "created_at": "2021-10-22T13:00:03.000Z",
+            "id": "1451533812022726666",
+            "text": "Introducing the Twitter Developer Insider Program\ud83c\udf89\ud83e\udd73Congratulations to our first group of amazing Insiders. So excited to work with you all! \n@JaniquekaJohn @hbeckpdx\n@Jarmosan @edent\n@IgorBrigadir @jamie_maguire1 \nFor more information, follow this link!\nhttps://t.co/I0mvRiedEV"
+        },
+        {
+            "created_at": "2021-10-22T13:00:03.000Z",
+            "id": "1451533812022726666",
+            "text": "Introducing the Twitter Developer Insider Program\ud83c\udf89\ud83e\udd73Congratulations to our first group of amazing Insiders. So excited to work with you all! \n@JaniquekaJohn @hbeckpdx\n@Jarmosan @edent\n@IgorBrigadir @jamie_maguire1 \nFor more information, follow this link!\nhttps://t.co/I0mvRiedEV"
+        }
     "meta": {
         "newest_id": "1451609611455242241",
         "oldest_id": "1449982379657875460",
@@ -4145,6 +4165,50 @@
             "created_at": "2021-10-22T18:01:15.000Z",
             "id": "1451609611455242241",
             "text": "Join us on Friday October 29th at 2 pm ET for our next live stream on academic research using the #TwitterAPI. We are excited to host @dfreelon and Andrew Crist from @unc_citap to share how they use the Twitter API for research studies. We will be live on https://t.co/GrtBOXh5Y1 https://t.co/URtpGcU3ZK"
+        },
+        {
+            "created_at": "2021-10-22T13:00:03.000Z",
+            "id": "1451533812022726666",
+            "text": "Introducing the Twitter Developer Insider Program\ud83c\udf89\ud83e\udd73Congratulations to our first group of amazing Insiders. So excited to work with you all! \n@JaniquekaJohn @hbeckpdx\n@Jarmosan @edent\n@IgorBrigadir @jamie_maguire1 \nFor more information, follow this link!\nhttps://t.co/I0mvRiedEV"
+        },
+        {
+            "created_at": "2021-10-22T13:00:03.000Z",
+            "id": "1451533812022726666",
+            "text": "Introducing the Twitter Developer Insider Program\ud83c\udf89\ud83e\udd73Congratulations to our first group of amazing Insiders. So excited to work with you all! \n@JaniquekaJohn @hbeckpdx\n@Jarmosan @edent\n@IgorBrigadir @jamie_maguire1 \nFor more information, follow this link!\nhttps://t.co/I0mvRiedEV"
+        },
+        {
+            "created_at": "2021-10-22T13:00:03.000Z",
+            "id": "1451533812022726666",
+            "text": "Introducing the Twitter Developer Insider Program\ud83c\udf89\ud83e\udd73Congratulations to our first group of amazing Insiders. So excited to work with you all! \n@JaniquekaJohn @hbeckpdx\n@Jarmosan @edent\n@IgorBrigadir @jamie_maguire1 \nFor more information, follow this link!\nhttps://t.co/I0mvRiedEV"
+        },
+        {
+            "created_at": "2021-10-22T13:00:03.000Z",
+            "id": "1451533812022726666",
+            "text": "Introducing the Twitter Developer Insider Program\ud83c\udf89\ud83e\udd73Congratulations to our first group of amazing Insiders. So excited to work with you all! \n@JaniquekaJohn @hbeckpdx\n@Jarmosan @edent\n@IgorBrigadir @jamie_maguire1 \nFor more information, follow this link!\nhttps://t.co/I0mvRiedEV"
+        },
+        {
+            "created_at": "2021-10-22T13:00:03.000Z",
+            "id": "1451533812022726666",
+            "text": "Introducing the Twitter Developer Insider Program\ud83c\udf89\ud83e\udd73Congratulations to our first group of amazing Insiders. So excited to work with you all! \n@JaniquekaJohn @hbeckpdx\n@Jarmosan @edent\n@IgorBrigadir @jamie_maguire1 \nFor more information, follow this link!\nhttps://t.co/I0mvRiedEV"
+        },
+        {
+            "created_at": "2021-10-22T13:00:03.000Z",
+            "id": "1451533812022726666",
+            "text": "Introducing the Twitter Developer Insider Program\ud83c\udf89\ud83e\udd73Congratulations to our first group of amazing Insiders. So excited to work with you all! \n@JaniquekaJohn @hbeckpdx\n@Jarmosan @edent\n@IgorBrigadir @jamie_maguire1 \nFor more information, follow this link!\nhttps://t.co/I0mvRiedEV"
+        },
+        {
+            "created_at": "2021-10-22T13:00:03.000Z",
+            "id": "1451533812022726666",
+            "text": "Introducing the Twitter Developer Insider Program\ud83c\udf89\ud83e\udd73Congratulations to our first group of amazing Insiders. So excited to work with you all! \n@JaniquekaJohn @hbeckpdx\n@Jarmosan @edent\n@IgorBrigadir @jamie_maguire1 \nFor more information, follow this link!\nhttps://t.co/I0mvRiedEV"
+        },
+        {
+            "created_at": "2021-10-22T13:00:03.000Z",
+            "id": "1451533812022726666",
+            "text": "Introducing the Twitter Developer Insider Program\ud83c\udf89\ud83e\udd73Congratulations to our first group of amazing Insiders. So excited to work with you all! \n@JaniquekaJohn @hbeckpdx\n@Jarmosan @edent\n@IgorBrigadir @jamie_maguire1 \nFor more information, follow this link!\nhttps://t.co/I0mvRiedEV"
+        },{
+            "created_at": "2021-10-22T13:00:03.000Z",
+            "id": "1451533812022726666",
+            "text": "Introducing the Twitter Developer Insider Program\ud83c\udf89\ud83e\udd73Congratulations to our first group of amazing Insiders. So excited to work with you all! \n@JaniquekaJohn @hbeckpdx\n@Jarmosan @edent\n@IgorBrigadir @jamie_maguire1 \nFor more information, follow this link!\nhttps://t.co/I0mvRiedEV"
         },
         {
             "created_at": "2021-10-22T13:00:03.000Z",
